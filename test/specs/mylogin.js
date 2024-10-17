@@ -1,103 +1,103 @@
-describe.skip('My first test', () => {
-   it.skip('Test Successful Login Functionality', async () => {
-    // navigate to a new URL
-    await browser.url('https://the-internet.herokuapp.com/login');
+// describe.skip('My first test', () => {
+//    it.skip('Test Successful Login Functionality', async () => {
+//     // navigate to a new URL
+//     await browser.url('https://the-internet.herokuapp.com/login');
 
-    // Username
-    const username = await $('input#username');
-    // Enter Value
-    await username.setValue('tomsmith');
+//     // Username
+//     const username = await $('input#username');
+//     // Enter Value
+//     await username.setValue('tomsmith');
 
-    //Password
-    const password = await $('input#password');
-    // Enter Value
-    await password.setValue('SuperSecretPassword!');
+//     //Password
+//     const password = await $('input#password');
+//     // Enter Value
+//     await password.setValue('SuperSecretPassword!');
 
-    //Submit Button
-    const submitBtn = await $('button[type="submit"]');
-    await submitBtn.click();
+//     //Submit Button
+//     const submitBtn = await $('button[type="submit"]');
+//     await submitBtn.click();
 
-    const message = await $('#flash');
-    await expect(message).toBeExisting();
-    console.log("What is the message?: " + await message.getText());
-    await expect(message).toHaveText(expect.stringContaining('You logged into a secure area!'));
-
-
-    await browser.pause(3000);
+//     const message = await $('#flash');
+//     await expect(message).toBeExisting();
+//     console.log("What is the message?: " + await message.getText());
+//     await expect(message).toHaveText(expect.stringContaining('You logged into a secure area!'));
 
 
-
-    // receive url
-    console.log(await browser.getUrl()); // outputs: "https://webdriver.io"
-
-   });
+//     await browser.pause(3000);
 
 
 
-   it.skip('Test Unsuccessful Username Login Functionality', async () => {
-    // navigate to a new URL
-    await browser.url('https://the-internet.herokuapp.com/login');
+//     // receive url
+//     console.log(await browser.getUrl()); // outputs: "https://webdriver.io"
 
-    // Username
-    const username = await $('input#username');
-    // Enter Value
-    await username.setValue('tomsmithHi');
-
-    //Password
-    const password = await $('input#password');
-    // Enter Value
-    await password.setValue('SuperSecretPassword!');
-
-    //Submit Button
-    const submitBtn = await $('button[type="submit"]');
-    await submitBtn.click();
-
-    const message = await $('#flash');
-    await expect(message).toBeExisting();
-    console.log("What is the message?: " + await message.getText());
-    await expect(message).toHaveText(expect.stringContaining('Your username is invalid!'));
-
-
-    await browser.pause(3000);
+//    });
 
 
 
-    // receive url
-    console.log(await browser.getUrl()); // outputs: "https://webdriver.io"
+//    it.skip('Test Unsuccessful Username Login Functionality', async () => {
+//     // navigate to a new URL
+//     await browser.url('https://the-internet.herokuapp.com/login');
 
-   });
+//     // Username
+//     const username = await $('input#username');
+//     // Enter Value
+//     await username.setValue('tomsmithHi');
 
+//     //Password
+//     const password = await $('input#password');
+//     // Enter Value
+//     await password.setValue('SuperSecretPassword!');
 
-   it.skip('Test Unsuccessful Password Login Functionality', async () => {
-    // navigate to a new URL
-    await browser.url('https://the-internet.herokuapp.com/login');
+//     //Submit Button
+//     const submitBtn = await $('button[type="submit"]');
+//     await submitBtn.click();
 
-    // Username
-    const username = await $('input#username');
-    // Enter Value
-    await username.setValue('tomsmith');
-
-    //Password
-    const password = await $('input#password');
-    // Enter Value
-    await password.setValue('SuperSecretPassword!!!!!!');
-
-    //Submit Button
-    const submitBtn = await $('button[type="submit"]');
-    await submitBtn.click();
-
-    const message = await $('#flash');
-    await expect(message).toBeExisting();
-    console.log("What is the message?: " + await message.getText());
-    await expect(message).toHaveText(expect.stringContaining('Your password is invalid!'));
+//     const message = await $('#flash');
+//     await expect(message).toBeExisting();
+//     console.log("What is the message?: " + await message.getText());
+//     await expect(message).toHaveText(expect.stringContaining('Your username is invalid!'));
 
 
-    await browser.pause(3000);
+//     await browser.pause(3000);
 
 
 
-    // receive url
-    console.log(await browser.getUrl()); // outputs: "https://webdriver.io"
+//     // receive url
+//     console.log(await browser.getUrl()); // outputs: "https://webdriver.io"
 
-   });
-});
+//    });
+
+
+//    it.skip('Test Unsuccessful Password Login Functionality', async () => {
+//     // navigate to a new URL
+//     await browser.url('https://the-internet.herokuapp.com/login');
+
+//     // Username
+//     const username = await $('input#username');
+//     // Enter Value
+//     await username.setValue('tomsmith');
+
+//     //Password
+//     const password = await $('input#password');
+//     // Enter Value
+//     await password.setValue('SuperSecretPassword!!!!!!');
+
+//     //Submit Button
+//     const submitBtn = await $('button[type="submit"]');
+//     await submitBtn.click();
+
+//     const message = await $('#flash');
+//     await expect(message).toBeExisting();
+//     console.log("What is the message?: " + await message.getText());
+//     await expect(message).toHaveText(expect.stringContaining('Your password is invalid!'));
+
+
+//     await browser.pause(3000);
+
+
+
+//     // receive url
+//     console.log(await browser.getUrl()); // outputs: "https://webdriver.io"
+
+//    });
+// });
